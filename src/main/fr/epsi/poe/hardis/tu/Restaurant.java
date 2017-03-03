@@ -57,7 +57,7 @@ public class Restaurant {
     }
 
     public String getDepartement(){
-
-        return null;
+        String cp = getCodePostal().substring(0,1);
+        return cp;
     }
 }
