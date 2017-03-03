@@ -21,9 +21,10 @@ public class Restaurant {
 
     private boolean ouvert;
 
-    Restaurant(){
+    Restaurant() {
         setOuvert(true);
     }
+
     public String getNom() {
         return nom;
     }
@@ -67,8 +68,8 @@ public class Restaurant {
         this.ouvert = ouvert;
     }
 
-    public String getDepartement(){
-        String cp = getCodePostal().substring(0,1);
+    public String getDepartement() {
+        String cp = getCodePostal().substring(0, 1);
         return cp;
     }
 }
