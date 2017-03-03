@@ -46,4 +46,13 @@ class RestaurantTest {
         // Assert
         assertEquals(tel, restaurant.getTelephone(), "Un numéro de téléphone au bon format n'a pas été sauvegardé.");
     }
+
+    @Test
+    public void testThatAddressContainsFrance() {
+        // Arrange
+        //Act
+        restaurant.setAdresse("12, rue du Moulin Saint-Bernard");
+        //Assert
+        assertTrue(restaurant.getAdresse().contains("FRANCE"));
+    }
 }
