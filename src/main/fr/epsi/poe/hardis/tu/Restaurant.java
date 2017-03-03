@@ -71,6 +71,9 @@ public class Restaurant {
 
     public String getDepartement() {
         String cp = getCodePostal().substring(0, 1);
+        return cp;
+    }
+
     public String getVille() {
         return ville;
     }
@@ -79,8 +82,4 @@ public class Restaurant {
         this.ville = ville;
     }
 
-    public String getDepartement(){
-        String cp = getCodePostal().substring(0,1);
-        return cp;
-    }
 }
