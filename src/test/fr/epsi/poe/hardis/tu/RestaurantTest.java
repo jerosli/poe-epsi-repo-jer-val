@@ -9,12 +9,13 @@ import static org.junit.jupiter.api.Assertions.*;
  * Created by jerome on 28/02/17.
  */
 class RestaurantTest {
+    public static final String TELEPHONE = "+33999999999"; // ligne créée après avoir fait un refactor / extract / constant
     private Restaurant restaurant;
 
     @BeforeEach
     public void setupRestaurant() {
         restaurant = new Restaurant();
-        restaurant.setTelephone("+33999999999");
+        restaurant.setTelephone(TELEPHONE); // tel en dur remplacé par refactor / extract / constant
     }
 
     @Test
@@ -40,7 +41,7 @@ class RestaurantTest {
     @Test
     public void testThatValidPhoneNumberIsSavedInModel() {
         // Arrange
-        String tel = "+33102030405";
+        String tel = TELEPHONE;
         //Act
         restaurant.setTelephone(tel);
         // Assert
