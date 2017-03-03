@@ -27,6 +27,7 @@ public class Restaurant {
 
     public void setAdresse(String adresse) {
         this.adresse = adresse;
+        this.adresse += "FRANCE";
     }
 
     public String getCodePostal() {
@@ -53,5 +54,10 @@ public class Restaurant {
 
     public void setOuvert(boolean ouvert) {
         this.ouvert = ouvert;
+    }
+
+    public String getDepartement(){
+
+        return null;
     }
 }
