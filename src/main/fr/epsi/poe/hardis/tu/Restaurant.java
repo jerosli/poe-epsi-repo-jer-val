@@ -8,6 +8,17 @@ public class Restaurant {
     private String adresse;
     private String codePostal;
     private String telephone;
+
+    public String getPays() {
+        return pays;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays.toUpperCase();
+    }
+
+    private String pays;
+
     private boolean ouvert;
 
     Restaurant(){
