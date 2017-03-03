@@ -9,13 +9,15 @@ import static org.junit.jupiter.api.Assertions.*;
  * Created by jerome on 28/02/17.
  */
 class RestaurantTest {
-    public static final String TELEPHONE = "+33999999999"; // ligne créée après avoir fait un refactor / extract / constant
+    public static final String VALID_PHONE_NUMBER = "+33999999999";
+    public static final String INVALID_PHONE_NUMBER = "0102030405";
     private Restaurant restaurant;
+
 
     @BeforeEach
     public void setupRestaurant() {
         restaurant = new Restaurant();
-        restaurant.setTelephone(TELEPHONE); // tel en dur remplacé par refactor / extract / constant
+        restaurant.setTelephone(VALID_PHONE_NUMBER);
     }
 
     @Test
@@ -31,7 +33,7 @@ class RestaurantTest {
     @Test
     public void testThatInvalidPhoneNumberIsNotSavedInModel() {
         // Arrange : créer le contexte d'exécution
-        String tel = "0102030405"; // <-- Mauvais format de numéro de téléphone
+        String tel = INVALID_PHONE_NUMBER; // <-- Mauvais format de numéro de téléphone
         // Act : action sur l'objet
         restaurant.setTelephone(tel);
         // Assert
@@ -41,7 +43,7 @@ class RestaurantTest {
     @Test
     public void testThatValidPhoneNumberIsSavedInModel() {
         // Arrange
-        String tel = TELEPHONE;
+        String tel = VALID_PHONE_NUMBER;
         //Act
         restaurant.setTelephone(tel);
         // Assert
