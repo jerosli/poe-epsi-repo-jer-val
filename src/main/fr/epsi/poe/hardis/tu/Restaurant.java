@@ -7,6 +7,7 @@ public class Restaurant {
     private String nom;
     private String adresse;
     private String codePostal;
+    private String ville;
     private String telephone;
     private boolean ouvert;
 
@@ -54,6 +55,14 @@ public class Restaurant {
 
     public void setOuvert(boolean ouvert) {
         this.ouvert = ouvert;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
     }
 
     public String getDepartement(){
