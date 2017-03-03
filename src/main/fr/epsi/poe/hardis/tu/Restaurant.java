@@ -31,6 +31,7 @@ public class Restaurant {
 
     public void setNom(String nom) {
         this.nom = nom;
+        this.nom = nom.toLowerCase();
     }
 
     public String getAdresse() {
